@@ -60,8 +60,6 @@ class Solution
             
             prefixSum+=arrcpy[i];
         }
-        
-        
         for(int i=0;i<n;i++)
         {
             ans[i]=map.get(arr[i]);
