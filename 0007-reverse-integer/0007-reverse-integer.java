@@ -4,8 +4,8 @@ class Solution {
         
         while(n!=0){
             int digit =n%10;
-           int newres =res*10+digit;
-            if( newres /10 != res){
+           int newres =res*10+digit; 
+            if( newres /10 != res){  //reverse engineering
                 // integer overflow
                 return 0;
             }
