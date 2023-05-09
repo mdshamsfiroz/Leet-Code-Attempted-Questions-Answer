@@ -26,15 +26,13 @@ class GfG
 
 //User function Template for Java
 
-class Solution{
-    String modify(String s){
-        char S=s.charAt(0);
-        if(Character.isLowerCase(S)){
-            s = s.toLowerCase();
+class Solution {
+    String modify(String s) {
+        char firstChar = s.charAt(0);
+        if (Character.isUpperCase(firstChar)) {
+            return s.toUpperCase();
+        } else {
+            return s.toLowerCase();
         }
-        else{
-            s = s.toUpperCase();
-        }
-        return s;
-    }             
+    }
 }
