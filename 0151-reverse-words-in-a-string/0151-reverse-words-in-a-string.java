@@ -1,4 +1,6 @@
 class Solution {
+    //split the string based on spaces
+    
     public String reverseWords(String str) {
          String [] words =str.trim().split("\s+"); //\s is white space character
          //trim:- leading & traailing spaces :discard
@@ -17,3 +19,5 @@ class Solution {
 ;
     }
     }
+//Time Complexity O(n)
+// Space Complexity O(n)// extra space (array)
