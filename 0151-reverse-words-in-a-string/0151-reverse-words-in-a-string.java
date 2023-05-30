@@ -1,6 +1,6 @@
+// leetcode 151
 class Solution {
-    //split the string based on spaces
-    
+   // two pointer approach
     public String reverseWords(String str) {
        int right =str.length()-1;
        StringBuilder res= new StringBuilder();
@@ -32,3 +32,5 @@ class Solution {
         return res.toString();
     }
 }
+// Time Complexity O(n) //2 pointer (linear)
+// Space Complexity O(1) /no extra space
