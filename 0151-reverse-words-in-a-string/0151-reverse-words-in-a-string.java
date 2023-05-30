@@ -2,22 +2,33 @@ class Solution {
     //split the string based on spaces
     
     public String reverseWords(String str) {
-         String [] words =str.trim().split("\s+"); //\s is white space character
-         //trim:- leading & traailing spaces :discard
-         // split on multiple spaces : single split
-        StringBuilder res = new StringBuilder()
-;
-     for(int idx=words.length -1; idx>=0; idx--){
-         if(idx< words.length -1){
-             res.append(" ");
-             // above two line is written because no space before first word
-         }
-         res.append(words[idx]);
-         
-     }
-        return res.toString()
-;
+       int right =str.length()-1;
+       StringBuilder res= new StringBuilder();
+        
+    //iterate on all words
+        while(right>=0){
+            // right will stop at ending index of a word
+            while(right>= 0 && str.charAt(right)== ' '){
+                right--;
+            }
+            
+            int left = right;
+            // left will stop at starting index of a word -1;
+            while(left>=0 && str.charAt(left) != ' '){
+                left --;
+            }
+            
+            if(res.length()> 0 && left<right){
+                res.append(" ");
+            }
+            
+          
+            
+            for(int idx=left +1; idx<= right ; idx++){
+                res.append(str.charAt(idx));
+            }
+            right = left;
+        }
+        return res.toString();
     }
-    }
-//Time Complexity O(n)
-// Space Complexity O(n)// extra space (array)
+}
